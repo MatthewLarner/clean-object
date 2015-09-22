@@ -4,11 +4,9 @@
   "description": "Recursively delete properties from an object that have values of {} or undefined",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "node tests"
   },
-  "dependencies": {
-    "tape": "^4.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^4.2.0"
   },
