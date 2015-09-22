@@ -7,7 +7,7 @@ test('empty object', function(t){
     var object = {},
         expectedObject = {};
 
-    t.deepEqual(dev(object), {}, 'Got correct result');
+    t.deepEqual(dev(object), expectedObject, 'Got correct result');
 });
 
 test('shallow', function(t){

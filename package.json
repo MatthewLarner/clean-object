@@ -1,14 +1,12 @@
 {
   "name": "clean-object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Recursively delete properties from an object that have values of {} or undefined",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "test": "node tests"
   },
-  "dependencies": {
-    "tape": "^4.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "^4.2.0"
   },
