@@ -258,3 +258,22 @@ test('value type', function(t) {
 
     t.deepEqual(dev(object), expectedObject, 'Got correct result');
 });
+
+test('nulls', function(t) {
+    t.plan(1);
+
+    var object = {
+            a: 1,
+            b: {
+                c: null
+            }
+        },
+        expectedObject = {
+            a: 1,
+            b: {
+                c: null
+            }
+        };
+
+    t.deepEqual(dev(object), expectedObject, 'Got correct result');
+});

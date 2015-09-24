@@ -10,6 +10,10 @@ function cleanObject(object) {
         if (typeof value === 'object' && !(value instanceof Date)) {
             cleanObject(object[key]);
 
+            if(value === null){
+                continue;
+            }
+
             if(!Array.isArray(value) && !Object.keys(value).length) {
                 delete object[key];
             }
