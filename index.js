@@ -1,21 +1,22 @@
 function cleanObject(object) {
     for (var key in object) {
+        if (Object.prototype.hasOwnProperty.call(object, key)) {
+            var value = object[key];
 
-        var value = object[key];
-
-        if(value === undefined) {
-            delete object[key];
-        }
-
-        if (typeof value === 'object' && !(value instanceof Date)) {
-            cleanObject(object[key]);
-
-            if(value === null){
-                continue;
+            if(value === undefined) {
+                delete object[key];
             }
 
-            if(!Array.isArray(value) && !Object.keys(value).length) {
-                delete object[key];
+            if (typeof value === 'object' && !(value instanceof Date)) {
+                cleanObject(object[key]);
+
+                if(value === null){
+                    continue;
+                }
+
+                if(!Array.isArray(value) && !Object.keys(value).length) {
+                    delete object[key];
+                }
             }
         }
     }
